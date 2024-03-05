@@ -13,6 +13,7 @@ This project has layered structure. \
 
 Uses spring Data JPA \
   -auto update mode is active\
+Lombok to reduce boilerplate code.\
 Exception Handling \
 Singleton Design Pattern imlementation thanks to Spring \
 # Technical Details
