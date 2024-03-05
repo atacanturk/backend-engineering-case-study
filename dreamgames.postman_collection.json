@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "b368799a-c10d-4645-8db5-7c8f53ee0c18",
+		"name": "dreamgames",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26036053"
+	},
+	"item": [
+		{
+			"name": "User_Progress",
+			"item": [
+				{
+					"name": "UpdateLevelRequest",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user"
+							]
+						},
+						"description": "UpdateLevelRequest: takes id field as a request body.\r\nEXAMPLE:\r\n{\r\n    \"id\": 5 \r\n}"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8090/api/user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/api/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "CreateUserRequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user?userName=player24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "player24"
+								}
+							]
+						},
+						"description": "This request creates a new user, returning a unique user ID, level,\r\ncoins, and country. takes userName as a param."
+					},
+					"response": [
+						{
+							"name": "CreateUserRequest",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/user?userName=testUser50",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"user"
+									],
+									"query": [
+										{
+											"key": "userName",
+											"value": "testUser50"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "GetAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/user/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"user",
+								"getAll"
+							]
+						},
+						"description": "Returns all users in database."
+					},
+					"response": [
+						{
+							"name": "GetAllUsers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/user/getAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"user",
+										"getAll"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "World_Cup_Tournament",
+			"item": [
+				{
+					"name": "CreateNewFakeTournament",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/tournament/newFakeTournament",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"tournament",
+								"newFakeTournament"
+							]
+						},
+						"description": "Instead of auto scheduled tournament creation, this request creates a new fake tournament"
+					},
+					"response": []
+				},
+				{
+					"name": "EnterTournamentRequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/tournament/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"tournament",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetGroupLeaderboardRequest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/tournament/getGroupLeaderboard?groupId=15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"tournament",
+								"getGroupLeaderboard"
+							],
+							"query": [
+								{
+									"key": "groupId",
+									"value": "15"
+								}
+							]
+						},
+						"description": "Takes groupId as a param. returns list group leaderboard asc."
+					},
+					"response": []
+				},
+				{
+					"name": "GetGroupRankRequest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/tournament/getGroupRank?tournamentId=1&userId=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"tournament",
+								"getGroupRank"
+							],
+							"query": [
+								{
+									"key": "tournamentId",
+									"value": "1"
+								},
+								{
+									"key": "userId",
+									"value": "5"
+								}
+							]
+						},
+						"description": "This request retrieves the player's rank in its group for any tournament"
+					},
+					"response": []
+				},
+				{
+					"name": "GetCountryLeaderboardRequest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/tournament/getCountryLeaderboard?tournamentId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"tournament",
+								"getCountryLeaderboard"
+							],
+							"query": [
+								{
+									"key": "tournamentId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
