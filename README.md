@@ -1,5 +1,8 @@
 # Backend Engineering Case Study
-NOT: I removed the test classes while dockerizing the project because the Maven dependencies were causing issues. I will add them to the repository very soon.
+## NOTES: 
+* When using the Singleton design pattern, it is possible to place an API Gateway in front of the Controller layer and perform scaling to prevent overload situations by using a Load Balancer. Due to time constraints, I did not implement this in the project.
+* I removed the test classes while dockerizing the project because the Maven dependencies were causing issues. I will add them to the repository very soon.
+
 # Project Overview
 This project has layered structure. \
   -core:  includes several common aspects(mapping, exception handling)\
