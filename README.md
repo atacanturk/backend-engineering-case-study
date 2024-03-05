@@ -22,5 +22,6 @@ if it is NOT_CALCULATED, sort everyone in the user's group according to their sc
 If the requesting user has received a reward, perform the necessary actions, then update the user's status to CLAIMED_OR_NO_REWARD. \
 \
 Thanks to this strategy, instead of re-ranking the group with every different user's request, the ranking is calculated for other users as well when any user from that group makes a request. This reduces the database access complexity from O(N) to O(N/5) in worst case.\
+\
 Additionally, this strategy is a lighter method than calling any stored procedure after the tournament ends.\
 In a large scale system, instead of performing this calculation for every user after the tournament ends, checking only when a new tournament participation request arrives is a cheaper method.
