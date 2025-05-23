@@ -1,8 +1,3 @@
-# Backend Engineering Case Study
-## NOTES: 
-* When using the Singleton design pattern, it is possible to place an API Gateway in front of the Controller layer and perform scaling to prevent overload situations by using a Load Balancer. Due to time constraints, I did not implement this in the project.
-* I removed the test classes while dockerizing the project because the Maven dependencies were causing issues. I will add them to the repository very soon.
-
 # Project Overview
 This project has layered structure. \
   -core:  includes several common aspects(mapping, exception handling)\
@@ -15,7 +10,7 @@ Uses spring Data JPA \
   -auto update mode is active\
 Lombok to reduce boilerplate code.\
 Exception Handling \
-Singleton Design Pattern imlementation thanks to Spring \
+Singleton Design Pattern implementation thanks to Spring \
 # Technical Details
 ## Group Matching
 GroupMatcher is a business layer service that matches tournament participants. It keeps tournament participation requests from different countries in separate queues. Whenever a request arrives, if there is at least one pending request in all queues, it matches these participants.\
